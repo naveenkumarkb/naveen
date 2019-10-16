@@ -1,0 +1,59 @@
+package assignment;
+public class test1{
+if (browser.equals("chrome"))
+{
+System.setProperty("webdriver.chrome.driver", "D:\\jars\\dhromedriver.exe");
+driver=new chromedriver();
+}
+else if(browser.equals("firefox"))
+{
+System.setProperty("webdriver.gecko.driver", "D:\\jars\\geckodriver.exe");
+driver=new firefoxdriver();
+}
+@test
+public void testscript1(){
+driver.manage().timeouts().implicitlywait(30, TimeUnit.SECONDS);
+driver.manage().window.maximize();
+driver.get("https://demo.midtrans.com/");
+driver.findElement(by.xpath("//*[@id="container"]/div/div/div[1]/div[2]/div/div/a")).click();
+driver.findElement(by.xpath("//*[@id="container"]/div/div/div[2]/div[2]/div[1]")).click();
+driver.findElement(by.xpath("//*[@id="application"]/div[1]/a")).click();
+driver.findElement(by.xpath("//*[@id="payment-list"]/div[1]/a/div[2]/div[2]")).click();
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[1]/input")).sendkeys("4811 1111 1111 1114");
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[2]/input")).sendkeys("0220");
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[3]/input")).sendkeys("123");
+driver.findElement(by.xpath("//*[@id="application"]/div[1]/a").click();
+driver.findElement(by.xpath("//*[@id="PaRes"]")).sendkeys("112233");
+driver.findElement(by.xpath("//*[@id="acsForm"]/div[6]/div/button[1]")).click();
+string expected ="Rp 20,000 Transaction successful";
+string actual = driver.findelement(by.xpath("//*[text()='Rp 20,000 Transaction successful'].gettext());
+Assert.assert Equals(actual, expected);
+system.out.println("Transaction Sucessful");
+driver.quit();
+}
+
+@test
+public void testscript2(){
+driver.manage().timeouts().implicitlywait(30, TimeUnit.SECONDS);
+driver.manage().window.maximize();
+driver.get("https://demo.midtrans.com/");
+driver.findElement(by.xpath("//*[@id="container"]/div/div/div[1]/div[2]/div/div/a")).click();
+driver.findElement(by.xpath("//*[@id="container"]/div/div/div[2]/div[2]/div[1]")).click();
+driver.findElement(by.xpath("//*[@id="application"]/div[1]/a")).click();
+driver.findElement(by.xpath("//*[@id="payment-list"]/div[1]/a/div[2]/div[2]")).click();
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[1]/input")).sendkeys("4911 1111 1111 1113");
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[2]/input")).sendkeys("0220");
+driver.findElement(by.xpath("//*[@id="application"]/div[3]/div/div/div/form/div[2]/div[3]/input")).sendkeys("123");
+driver.findElement(by.xpath("//*[@id="PaRes"]")).sendkeys("112233");
+driver.findElement(by.xpath("//*[@id="acsForm"]/div[6]/div/button[1]")).click();
+string expected = "Transaction Failed";
+string actual = driver.findelement(by.xpath("//*[@id="application"]/div[3]/div/div/div/div/div/div[1]/span").gettext());
+Assert.assert Equals(actaul, expected);
+System.Out.Println("Transaction Failed");
+driver.quit();
+}
+}
+
+
+
+
